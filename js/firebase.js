@@ -10,10 +10,9 @@ query.once("value")
       // childData will be the actual contents of the child
       var desp = childSnapshot.child("description").val();
       var img = childSnapshot.child("image").val();
-      var image_and_desp_string;
 
       key % 2 === 0 ?
-      $("#product_section").append(          //get value from Firebase and show accordingly
+      $("#product_section").append(          //show value from Firebase, image then description
         '<div class="row">'
           + '<div class="col-md-6 col-sm-6">'
               + '<img src="' + img + '">'
@@ -22,7 +21,7 @@ query.once("value")
               + '<p>' + desp + '</p>'
           + '</div>'
          + '</div>')
-      : $("#product_section").append(            //get value from Firebase and show accordingly
+      : $("#product_section").append(        //show value from Firebase, description then image
         '<div class="row">'
           + '<div class="col-md-6 col-sm-6 productDetails">'
               + '<p>' + desp + '</p>'
