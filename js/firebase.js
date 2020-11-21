@@ -5,7 +5,7 @@ rootRef.on("child_added", snap => { //get all data from Firebase
     var desp = snap.child("description").val();
     var image = snap.child("image").val();
     var imageString = '<div class="col-md-6 col-sm-6">'
-         + '<img src="' + image + '">'
+         + '<img src="images/' + image + '">'
      + '</div>';
     var despString = '<div class="col-md-6 col-sm-6 productDetails">'
          + '<p>' + desp + '</p>'
